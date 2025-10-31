@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-int countEvenDigits(int n) {
+int EvenDigits(int n) {
     n = abs(n);
     if (n == 0)
         return 0;
-    return (n % 10 % 2 == 0) + countEvenDigits(n / 10);
+    return (n % 10 % 2 == 0) + EvenDigits(n / 10);
 }
 
 int main() {
@@ -13,7 +13,7 @@ int main() {
     cout << "Enter a number: ";
     cin >> num;
 
-    cout << "Number of even digits: " << countEvenDigits(num) << endl;
+    cout << "Number of even digits: " << EvenDigits(num) << endl;
 
     return 0;
 }
